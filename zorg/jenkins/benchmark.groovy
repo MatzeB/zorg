@@ -69,7 +69,7 @@ def pipeline(label, body) {
         try {
             stage('main') {
                 dir('config') {
-                    svn url: 'http://llvm.org/svn/llvm-project/zorg/trunk', poll: false
+                    git url: 'https://github.com/MatzeB/zorg.git', poll: false
                 }
                 body()
             }
